@@ -1,0 +1,6 @@
+=== RUN   TestTreeFull
+--- PASS: TestTreeFull (0.02s)
+=== RUN   TestTreeDir
+--- PASS: TestTreeDir (0.02s)
+PASS
+ok  	hw1_tree	0.041s
