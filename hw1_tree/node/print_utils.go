@@ -1,6 +1,11 @@
-package main
+package node
 
 import "strconv"
+
+const (
+	next = "├───"
+	end  = "└───"
+)
 
 func getPrettySize(size int64, isDir bool) string {
 	if size == 0 {

@@ -4,11 +4,8 @@ import (
 	"io"
 	"os"
 	"sort"
-)
 
-const (
-	next = "├───"
-	end  = "└───"
+	node "./node"
 )
 
 func main() {
@@ -39,7 +36,7 @@ func dirTree(out io.Writer, path string, printFiles bool) error {
 	return nil
 }
 
-func getDirNodesTree(path string, name string, isLast bool) (*Node, error) {
+func getDirNodesTree(path string, name string, isLast bool) (*node.Node, error) {
 
 	file, err := os.Open(path)
 	if err != nil {
@@ -51,7 +48,7 @@ func getDirNodesTree(path string, name string, isLast bool) (*Node, error) {
 		return nil, err
 	}
 
-	root := Node{
+	root := node.Node{
 		Name:  name,
 		Size:  info.Size(),
 		IsDir: info.IsDir(),
